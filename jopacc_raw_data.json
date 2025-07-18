@@ -1,0 +1,113 @@
+{
+  "accounts_api_response": {
+    "status": "200 OK",
+    "endpoint": "https://jpcjofsdev.apigw-az-eu.webmethods.io/gateway/Accounts/v0.4.3/accounts",
+    "data": [
+      {
+        "customerId": "IND_CUST_015",
+        "accountId": "1023",
+        "accountStatus": "closed",
+        "mainRoute": {
+          "schema": "IBAN",
+          "address": "JO27CBJO0000000000000000001023"
+        },
+        "accountType": {
+          "code": "SAL.IND",
+          "name": "Individual Salary Account"
+        },
+        "accountCurrency": "JOD",
+        "availableBalance": {
+          "balanceAmount": 1500.75,
+          "balancePosition": "credit"
+        },
+        "institutionBasicInfo": {
+          "institutionType": "BANK",
+          "name": {
+            "enName": "Bank of JoPACC LTD.",
+            "arName": "شركة بنك جوباك. محدود"
+          }
+        }
+      },
+      {
+        "customerId": "IND_CUST_015",
+        "accountId": "1022",
+        "accountStatus": "suspended",
+        "mainRoute": {
+          "schema": "IBAN",
+          "address": "JO27CBJO0000000000000000001022"
+        },
+        "accountType": {
+          "code": "CUR.IND",
+          "name": "Individual Current Account"
+        },
+        "accountCurrency": "JOD",
+        "availableBalance": {
+          "balanceAmount": 2500.5,
+          "balancePosition": "debit"
+        }
+      },
+      {
+        "customerId": "IND_CUST_015",
+        "accountId": "1021",
+        "accountStatus": "active",
+        "mainRoute": {
+          "schema": "IBAN",
+          "address": "JO27CBJO0000000000000000001021"
+        },
+        "accountType": {
+          "code": "SAV.IND",
+          "name": "Individual Savings Account"
+        },
+        "accountCurrency": "JOD",
+        "availableBalance": {
+          "balanceAmount": 0,
+          "balancePosition": "credit"
+        }
+      }
+    ]
+  },
+  "fx_rates_api_response": {
+    "status": "200 OK",
+    "endpoint": "http://jpcjofsdev.apigw-az-eu.webmethods.io/gateway/Foreign%20Exchange%20%28FX%29/v0.4.3/institution/FXs",
+    "data": [
+      {
+        "sourceCurrency": "JOD",
+        "targetCurrency": "USD",
+        "conversionValue": 1.41,
+        "inverseConversionValue": 0.709,
+        "minconversionValue": 5,
+        "maxconversionValue": 5000
+      },
+      {
+        "sourceCurrency": "JOD",
+        "targetCurrency": "EUR",
+        "conversionValue": 1.28,
+        "inverseConversionValue": 0.777,
+        "minconversionValue": 5,
+        "maxconversionValue": 5000
+      },
+      {
+        "sourceCurrency": "JOD",
+        "targetCurrency": "GBP",
+        "conversionValue": 1.11,
+        "inverseConversionValue": 0.901,
+        "minconversionValue": 5,
+        "maxconversionValue": 5000
+      }
+    ]
+  },
+  "fx_quote_example": {
+    "status": "200 OK",
+    "request": "100 JOD to USD",
+    "response": {
+      "quoteId": "generated-uuid",
+      "baseCurrency": "JOD",
+      "targetCurrency": "USD",
+      "rate": 1.41,
+      "amount": 100,
+      "convertedAmount": 141.0,
+      "validUntil": "2025-07-18T10:21:46Z",
+      "timestamp": "2025-07-18T10:16:46Z"
+    }
+  }
+}
